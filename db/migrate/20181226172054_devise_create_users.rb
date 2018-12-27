@@ -9,12 +9,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string     :nickname,      null:false
       t.string     :age,           null:false
       t.string     :gender,        null:false
-      t.string     :instagram
       t.string     :customer_id
 
       t.text       :profile
       t.text       :profile_image
-      t.references :prefecture, null:false, foreign_key:true
 
       ## Recoverable
       t.string   :reset_password_token
