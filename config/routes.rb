@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
-<<<<<<< Updated upstream
   devise_for :users
-  # devise_for :installs
-=======
-  devise_for :installs
->>>>>>> Stashed changes
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root 'lectures#index'
+
+  resources :users, only: [:show, :edit, :update] do
+    member do
+      get :following, :followers
+    end
+  end
+
+  resources :relationships, only: [:create, :destroy]
+
+  resources :lectures do
+    member do
+      post 'pay'
+    end
+  end
 end
