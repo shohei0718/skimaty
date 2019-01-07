@@ -1,0 +1,12 @@
+%li.lecture_content
+  = link_to lecture_path(lecture[:id]) do
+    .photo
+      -if lecture.image.present?
+        = image_tag lecture.image.to_s
+      -else
+        %p No image
+    .text
+      %h3 #{lecture.title}
+      .price-box
+        .price #{lecture.price}
+        %p （税込）

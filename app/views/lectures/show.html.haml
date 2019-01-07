@@ -1,0 +1,68 @@
+= render partial: "header"
+.lecture
+  .lecture__detail
+    .lecture__detail__side
+      .lecture__detail__side__image
+        -if @user.profile_image.present?
+          .user_image
+            = image_tag @user.profile_image.to_s
+        -else
+          .user_image No image
+      .user_nickname
+        = @user.nickname
+      .user_follow_data
+        - @user ||= current_user
+        .following
+          フォロー
+          %br/
+          = link_to following_user_path(@user) do
+            = @user.followings.count
+            %span人
+        .follower
+          フォロワー
+          %br/
+          = link_to followers_user_path(@user) do
+            = @user.followers.count
+            %span人
+      - if user_signed_in?
+        - unless current_user?(@user)
+          #follow_form
+            - if current_user.following?(@user)
+              = render partial: "./users/unfollow"
+            - else
+              = render partial: "./users/follow"
+      .lecture__detail__side__profile
+        %p.title 【プロフィール】
+        .user_profile
+          = @user.profile
+      .lecture__detail__side__following
+    .lecture__detail__main
+      %h2.title #{@lecture.title}
+      .lecture__detail__main__image
+        -if @lecture.image.present?
+          .lecture_image
+            = image_tag @lecture.image.to_s
+      .lecture__detail__main__sumary
+        .lecture_box
+          %p 【できること・お話できること】
+          .sumary
+            = @lecture.sumary
+        .lecture_box
+          %p.price 【プラン】
+          .proice
+            = "#{@lecture.price + "/月"}"
+        .lecture_box
+          %p.attempt 【定員枠】
+          .attempt
+            = @lecture.attempt
+      .lecture__detail__main__btn
+        - if user_signed_in?
+          - if @lecture.user_id != current_user.id
+            .form_pay
+              = form_tag(action: :pay, method: :post) do
+                %script.payjp-button{"data-key" => "pk_test_00ff76d8e072d9b17859bd34", src: "https://checkout.pay.jp", :type => "text/javascript", "data-text" => "契約する", "data-submit-text" => "支払い完了", "data-payjp" => "016e8973300880b74ce3a321e59faa6ed94aa751"}
+                = hidden_field_tag :price, @lecture.price
+                = hidden_field_tag :user_id, @user.id
+                = hidden_field_tag :customer_id, @user.customer_id
+            .back_button
+              =link_to "戻る", root_path, class: "btn-blue"

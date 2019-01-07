@@ -1,0 +1,13 @@
+= render partial: "header"
+.contents
+  .contents__pr
+
+  .contents__main
+    %h2.last-information
+      スキルの新着投稿一覧
+    .lecture-box
+      %ul
+        - @lectures.each do |lecture|
+          = render partial: 'lectures/lecture_box', locals:{lecture:lecture}
+
+/ .footer
