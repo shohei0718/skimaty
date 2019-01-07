@@ -78,3 +78,4 @@ gem 'mini_magick'
 # gem "recaptcha", require: "recaptcha/rails"
 gem 'payjp'
 gem 'payjp_mock'
+gem 'ransack'
