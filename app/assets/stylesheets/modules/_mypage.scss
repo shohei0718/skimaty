@@ -1,0 +1,146 @@
+.mypage {
+  margin-top: 30px;
+
+  &__detail {
+    background-color: white;
+    margin: 0 auto;
+    height: 1200px;
+    width: 1200px;
+
+    &__side {
+      background-color:#FFDBC9;
+      margin-top: 50px;
+      width: 300px;
+      float: left;
+
+      nav.mypage-nav {
+        font-size: 16px;
+
+        ul.mypage-nav__list {
+          margin: 10px 10px;
+          a {
+            text-decoration: none;
+            color: black;
+
+          }
+
+          li {
+            margin: 10px 10px;
+            border-bottom: solid 1px black;
+          }
+        }
+      }
+    }
+
+    &__main {
+      height: 1000px;
+      width: 850px;
+      float: left;
+
+      h2 {
+        text-align: center;
+        padding-top: 40px;
+      }
+
+      &__content {
+        // border: solid 2px black;
+        margin: 10px 0 0 40px;
+        float: left;
+        list-style: none;
+
+        ul.mypage {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li.mylecture_content {
+            background-color: #EAD9FF;
+            width: 240px;
+            height: 340px;
+            float: left;
+            margin:20px 15px;
+            text-align: center;
+
+
+            a {
+              text-decoration: none;
+              color: black;
+              width: 240px;
+              height: 340px;
+
+              .myphoto {
+                background-color: #C2EEFF;
+                width: 200px;
+                height: 200px;
+                display: inline-block;
+                text-decoration: none;
+                background: gray;
+                color: #FFF;
+                line-height: 200px;
+                border-radius: 50%;
+                font-size: 20px;
+                text-align: center;
+                vertical-align: middle;
+                overflow: hidden;
+                transition: .4s;
+                margin-top: 20px;
+
+                img {
+                  width: 200px;
+                  height:200px;
+                }
+              }
+
+              .mytext {
+                width: 220px;
+                height: 60px;
+
+                h3 {
+                  font-size: 16px;
+                  text-align: center;
+                  margin-top: 5px;
+                }
+
+                .myprice-box {
+                  padding: 15px 0 0 15px;
+                  text-align: left;
+
+                  .myprice {
+                    font-size: 14px;
+                    font-weight: bold;
+                  }
+
+
+                  p.price {
+                    font-size: 8px;
+                    font-weight: lighter;
+                    clear: both;
+                    display: -webkit-box;
+                  }
+                }
+              }
+            }
+
+            .lecture_edit {
+              background-color: #A16EFF;
+              margin: 24px auto;
+              height: 30px;
+              // border: solid 1px;
+
+              a {
+                color: #EAD9FF;
+                text-align: center;
+                padding-bottom: 10px;
+                font-size: 18px;
+              }
+            }
+
+            .lecture_edit:hover {
+              background:#7B3CFF;
+            }
+          }
+        }
+      }
+    }
+  }
+}

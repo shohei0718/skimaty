@@ -1,0 +1,199 @@
+.header {
+  height: 50px;
+  padding-top: 10px;
+  width: 100%;
+  // min-width: 900px;
+
+  .service {
+    height: 50px;
+    width: 100px;
+    font-weight: bold;
+    text-align: center;
+    float: left;
+    margin-left: 15px;
+
+    .service-name {
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }
+
+  .description {
+    display: inline-block;
+    float: left;
+    padding-left: 400px;
+    font-size: 18px;
+  }
+
+  .account {
+    float: right;
+    padding: 5px 30px;
+    font-size: 16px;
+
+    .post {
+      display: inline-block;
+      margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        color: red;
+      }
+    }
+
+    .page {
+      display: inline-block;
+      margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        color: blue;
+      }
+    }
+
+    .logOut {
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    .signIn {
+      display: inline-block;
+      margin-right: 20px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .signUp {
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.contents {
+  height: 1000px;
+  width: 100%;
+
+  &__pr {
+    background-color:#D7EEFF;
+    height: 450px;
+  }
+
+  &__main {
+    background-color: white;
+    margin: 0 auto;
+    height: 100%;
+    width: 1200px;
+
+    h2.last-information {
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+      padding-top: 20px;
+    }
+  }
+
+    .other-item-box{
+    font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    height: 800px;
+    width: 700px;
+    margin: 20px auto 0;
+    padding: 24px 0 40px 0;
+
+    h2{
+
+      a{
+        font-size: 20px;
+        text-decoration: none;
+        color: #0099e8;
+      }
+    }
+
+    .other-item-contents{
+      height: auto;
+      width:auto;
+      overflow-x: auto;
+      overflow-y: hidden;
+      margin-top: 10px;
+
+      &__box {
+        background-color: white;
+        width: 220px;
+        height: 330px;
+        float: left;
+        margin:0 0 20px 10px;
+
+        a {
+          text-decoration: none;
+          color: black;
+
+          .photo {
+            background-color: white;
+            width: 220px;
+            height: 220px;
+
+            img {
+              width: 220px;
+              height: 220px;
+            }
+          }
+
+          .text {
+            width: 220px;
+            height: 110px;
+
+            h3 {
+              font-size: 16px;
+              text-align: center;
+              padding-bottom: 20px;
+              margin-top: 5px;
+            }
+
+            .price-box {
+              padding: 20px;
+
+              .price {
+                font-size: 16px;
+                font-weight: bold;
+                float: left;
+              }
+
+              i {
+                float: right;
+                margin-right: 5px;
+              }
+              span {
+                font-size: 16px;
+                float: right;
+                position:relative;
+                left: 36px;
+                color: black;
+              }
+
+              p {
+                font-size: 8px;
+                font-weight: lighter;
+                clear: both;
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .footer {
+//   height: 200px;
+//   width: 100%;
+//   background-color: black;
+// }

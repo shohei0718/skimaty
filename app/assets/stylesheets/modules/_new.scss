@@ -1,0 +1,121 @@
+.form {
+  margin: 0 auto;
+  padding-top: 100px;
+
+  &__box {
+    width: 800px;
+    height:100%;
+    padding-top: 20px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+    text-align: left;
+
+    h2 {
+      text-align: center;
+    }
+
+    &__content {
+      margin: 30px;
+
+      .field {
+        width: 400px;
+        height: 50px;
+        text-align: left;
+        font-size: 16px;
+        margin-bottom: 30px;
+
+        #lecture_title {
+          width: 700px;
+          height: 30px;
+          font-size: 16px;
+        }
+
+        #lecture_image {
+          width: 400px;
+          height: 30px;
+          font-size: 16px;
+        }
+
+        #lecture_price {
+          width: 400px;
+          height: 30px;
+          font-size: 16px;
+        }
+
+        #lecture_genre_id {
+          width: 400px;
+          height: 30px;
+          font-size: 16px;
+        }
+
+        #lecture_attempt {
+          width: 400px;
+          height: 30px;
+          font-size: 16px;
+        }
+      }
+
+      .field_sumary {
+        margin-bottom: 30px;
+        font-size: 16px;
+
+        #lecture_sumary {
+          width: 700px;
+          height: 500px;
+          font-size: 16px;
+        }
+      }
+
+      .field_button {
+        text-align: center;
+        padding-top: 30px;
+
+        .btn-blue{
+          display: inline-block;
+          text-decoration: none;
+          background: #8EB8FF;
+          color: #FFF;
+          width: 120px;
+          height: 120px;
+          line-height: 120px;
+          border-radius: 50%;
+          font-size: 16px;
+          text-align: center;
+          vertical-align: middle;
+          overflow: hidden;
+          transition: .4s;
+          margin-right: 30px;
+        }
+
+        .btn-blue:hover{
+            background: #5D99FF;
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        .btn-pink{
+          display: inline-block;
+          text-decoration: none;
+          background: #FF69A3;
+          color: #FFF;
+          width: 120px;
+          height: 120px;
+          line-height: 120px;
+          border-radius: 50%;
+          font-size: 16px;
+          text-align: center;
+          vertical-align: middle;
+          overflow: hidden;
+          transition: .4s;
+        }
+
+        .btn-pink:hover{
+            background: #FF1A6F;
+            cursor: pointer;
+            cursor: hand;
+        }
+      }
+    }
+  }
+}
