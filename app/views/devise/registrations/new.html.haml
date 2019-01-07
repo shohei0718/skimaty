@@ -1,0 +1,46 @@
+.signup
+  .signup__box
+    %h2 新規登録
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      .signup__box__content
+        .field
+          = f.label :メールアドレス
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+        .field
+          = f.label :パスワード
+          - if @minimum_password_length
+            %em
+              (#{@minimum_password_length} characters minimum)
+          %br/
+          = f.password_field :password, autocomplete: "new-password"
+        .field
+          = f.label :パスワード（確認用）
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "new-password"
+        .field
+          = f.label :ニックネーム
+          %br/
+          = f.text_field :nickname, placeholder:"（例）スキマ太郎"
+        .field_profile
+          = f.label :プロフィール
+          %br/
+          = f.text_area :profile, placeholder:"これまでの経験や実績などを記入して、みんなにアピールしてみましょう！  "
+        .field
+          = f.label :ご年齢
+          %br/
+          = f.select :age,[["10代", "10代"],["20代", "20代"],["30代", "30代"],["40代", "40代"],["50代", "50代"],["60代", "60代"],["70代", "70代"],["80代", "80代"]], prompt: "選択してください"
+          %br/
+        .field
+          = f.label :性別
+          %br/
+          = f. select :gender,[["男性", "男性"],["女性", "女性"]], prompt: "選択してください"
+
+        .field
+          = f.label :プロフィール写真
+          = f.file_field :profile_image
+
+        .actions
+          = f.submit "登録完了"
+
