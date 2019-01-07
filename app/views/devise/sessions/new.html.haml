@@ -1,0 +1,19 @@
+.login
+  .login__content
+    %h2 ログインページ
+    = render "devise/shared/links"
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .login__field
+          = f.label :email
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+        .login__field
+          = f.label :password
+          %br/
+          = f.password_field :password, autocomplete: "current-password"
+        - if devise_mapping.rememberable?
+        .login__field
+          = f.check_box :remember_me
+          = f.label :パスワードを記憶させる
+        .actions
+          = f.submit "ログイン"

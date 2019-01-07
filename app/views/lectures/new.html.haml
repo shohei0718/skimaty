@@ -1,0 +1,38 @@
+.form
+  .form__box
+    %h2 スキル投稿フォーム
+    = form_for @lecture do |f|
+      / = devise_error_messages!
+      .form__box__content
+        .field
+          = f.label :ジャンル
+          %br/
+          = f.collection_select :genre_id, Genre.all, :id, :genre, {prompt: '----'}, class: 'select__default'
+
+        .field
+          = f.label :タイトル
+          %br/
+          = f.text_field :title, placeholder:"（例）未経験エンジニアへの転職相談に乗ります    "
+
+        .field
+          = f.label :イメージ画像
+          %br/
+          = f.file_field :image
+
+        .field_sumary
+          = f.label :できること・お話できること
+          %br/
+          = f.text_area :sumary, placeholder:"これまでの経験や実績などを記入して、みんなにアピールしてみましょう！  "
+
+        .field
+          = f.label :価格（月額）
+          %br/
+          = f.select :price,[["1,000円", "1,000円"],["1,500円", "1,500円"],["2,000円", "2,000円"],["2,500円", "2,500円"],["3,000円", "3,000円"]], prompt: "選択してください"
+
+        .field
+          = f.label :定員人数
+          %br/
+          = f.select :attempt, [["1", "1"],["2", "2"],["3", "3"],["4", "4"],["5", "5"],["6", "6"],["7", "7"],["8", "8"],["9", "9"],["10", "10"]], prompt: "選択してください"
+        .field_button
+          =link_to "戻る", root_path, class: "btn-blue"
+          =f.submit "投稿する", class: "btn-pink"

@@ -1,0 +1,75 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li.lecture_content {
+    background-color: #EAD9FF;
+    width: 260px;
+    height: 360px;
+    float: left;
+    margin:20px 20px;
+    text-align: center;
+
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      .photo {
+        background-color: #C2EEFF;
+        width: 220px;
+        height: 220px;
+        display: inline-block;
+        text-decoration: none;
+        background: gray;
+        color: #FFF;
+        line-height: 220px;
+        border-radius: 50%;
+        font-size: 20px;
+        text-align: center;
+        vertical-align: middle;
+        overflow: hidden;
+        transition: .4s;
+        margin-top: 20px;
+
+        img {
+          width: 220px;
+          height: 220px;
+
+        }
+      }
+
+      .text {
+        width: 220px;
+        height: 110px;
+
+        h3 {
+          font-size: 16px;
+          text-align: center;
+          padding-bottom: 20px;
+          margin-top: 5px;
+        }
+
+        .price-box {
+          padding: 20px;
+
+          .price {
+            font-size: 16px;
+            font-weight: bold;
+            float: left;
+          }
+
+
+          p {
+            font-size: 8px;
+            font-weight: lighter;
+            clear: both;
+            display: -webkit-box;
+
+          }
+        }
+      }
+    }
+  }
+}
