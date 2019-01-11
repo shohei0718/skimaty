@@ -1,4 +1,5 @@
 .header {
+  background-color: #FFEEFF;
   height: 50px;
   padding-top: 10px;
   width: 100%;
@@ -83,13 +84,87 @@
   width: 100%;
 
   &__pr {
-    background-color:#D7EEFF;
+    background-color:#FFFFDD;
     height: 450px;
+
+    &__about {
+      font-size: 32px;
+      font-family: Meiryo;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    &__image {
+      margin: 20px auto;
+      height: 250px;
+      width: 750px;
+
+      img {
+        height: 250px;
+        width: 750px;
+      }
+    }
   }
+
+  &__character {
+    height: 450px;
+    font-size: 25px;
+
+    &__text {
+      padding-top: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    &__box {
+      height: 380px;
+      width: 1000px;
+      margin: 10px auto;
+      font-size: 16px;
+      border-style: double;
+
+      &--detail {
+        height: 200px;
+        width: 200px;
+        margin: 60px;
+        font-size: 16px;
+        float: left;
+
+        .content {
+          text-decoration: none;
+          font-size: 14px;
+          margin: 0 auto;
+          width: 200px;
+          height: 200px;
+
+          .picture {
+            height: 120px;
+            width: 120px;
+            margin: 10px auto;
+
+            img {
+              height: 120px;
+              width: 120px;
+            }
+          }
+
+          .explanation {
+            font-size: 14px;
+
+            .explanation-detail {
+              font-size: 12px;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+
 
   &__main {
     background-color: white;
-    margin: 0 auto;
+    margin: 40px auto;
     height: 100%;
     width: 1200px;
 
@@ -98,6 +173,7 @@
       font-size: 25px;
       font-weight: bold;
       padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 
