@@ -1,7 +1,11 @@
 .header
   .service
     =link_to "Skimaty", '/', class: "service-name"
-  .description スキマ時間にスマホひとつで副業開始！！
+  .description スキマ時間にスマホひとつで学習開始！！
+  %dl.searchbox
+    = search_form_for @search do |f|
+      %dt= f.text_field :title_cont ,placeholder: '検索するテキストを入力...'
+      %dd= f.submit ("検索") , class: 'search-btn'
   - if user_signed_in?
     .account
       .post

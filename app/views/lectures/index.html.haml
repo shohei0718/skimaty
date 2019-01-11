@@ -38,12 +38,13 @@
             .explanation-detail
             スキルの出品者とは月単位での契約になるので、1日だけでなく、期間内であれば、継続的に学習を進めたり相談することができます。
 
+- if @result.any?
   .contents__main
     %h2.last-information
-      スキルの新着投稿一覧
+      投稿スキル
     .lecture-box
       %ul
-        - @lectures.each do |lecture|
+        - @result.each do |lecture|
           = render partial: 'lectures/lecture_box', locals:{lecture:lecture}
 
 / .footer
