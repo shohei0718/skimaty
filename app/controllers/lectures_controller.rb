@@ -1,11 +1,15 @@
 class LecturesController < ApplicationController
   def index
     @lectures = Lecture.includes(:user).limit(8).order("created_at DESC")
+    @search = Lecture.ransack(params[:q])
+    @result = @search.result(distinct: true)
   end
 
   def show
     @lecture = Lecture.find(params[:id])
     @user = @lecture.user
+    @search = Lecture.ransack(params[:q])
+    @result = @search.result(distinct: true)
   end
 
   def new

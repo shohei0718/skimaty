@@ -1,13 +1,50 @@
 = render partial: "header"
 .contents
   .contents__pr
+    .contents__pr__about
+      Skimatyとは
+      %br
+      教えたい人と学びたい人をつなぐ
+      %br
+      スマホ完結型のプラットフォームです。
+    .contents__pr__image
+      = image_tag "スキマティ.png"
+  .contents__character
+    .contents__character__text
+      Skimatyの3つの特徴
+    .contents__character__box
+      .contents__character__box--detail
+        .content
+          .picture
+            = image_tag "http://wsplus.sakura.ne.jp/img/013260.jpg"
+          .explanation
+            %h3 お手頃価格
+            .explanation-detail
+            月1,000円〜3,000円というお手頃価格で始めることができます
+      .contents__character__box--detail
+        .content
+          .picture
+            = image_tag "https://illalet.com/wp-content/uploads/2017/07/4_22_51.png"
+          .explanation
+            %h3 メッセージで完結
+            .explanation-detail
+            基本的にはメッセージによるやり取りになるので、対面で会ってお話する必要がないので、交通費や交通時間・周りの目を気にすることなく学ぶことができます。
+      .contents__character__box--detail
+        .content
+          .picture
+            = image_tag "https://publicdomainq.net/images/201712/29s/publicdomainq-0017290spd.jpg"
+          .explanation
+            %h3 継続学習
+            .explanation-detail
+            スキルの出品者とは月単位での契約になるので、1日だけでなく、期間内であれば、継続的に学習を進めたり相談することができます。
 
+- if @result.any?
   .contents__main
     %h2.last-information
-      スキルの新着投稿一覧
+      投稿スキル
     .lecture-box
       %ul
-        - @lectures.each do |lecture|
+        - @result.each do |lecture|
           = render partial: 'lectures/lecture_box', locals:{lecture:lecture}
 
 / .footer
